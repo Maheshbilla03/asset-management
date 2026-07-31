@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AssetPro Dashboard</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imresizer-asset.webp" alt="Stackly Logo">
+                </a>
+            </div>
+
+            <div class="close-btn" id="closeBtn">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+        </div>
+
+        <ul id="sidebarMenu">
+
+            <li class="active" data-section="dashboard">
+                <i class="fa-solid fa-house"></i>
+                Dashboard
+            </li>
+
+            <li data-section="reports">
+                <i class="fa-solid fa-chart-column"></i>
+                Reports
+            </li>
+
+            <li data-section="employees">
+                <i class="fa-solid fa-users"></i>
+                Employees
+            </li>
+
+            <li data-section="settings">
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </li>
+
+            <li id="logoutBtn">
+                <a href="login.html">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- overlay behind sidebar on mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <header class="topbar" id="topbar">
+
+            <div class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="topbar-title">AssetPro</div>
+
+            <div class="topbar-user">
+                <span id="clock"></span>
+            </div>
+
+        </header>
+
+        <div class="content-area">
+
+            <!-- DASHBOARD -->
+            <section id="dashboard" class="page-section">
+
+                <!-- Welcome Banner -->
+                <div class="dashboard-banner">
+
+                    <div class="banner-content">
+
+                        <span>
+                            Welcome Back 👋
+                            <strong id="welcomeUser"></strong>
+                        </span>
+
+                        <h2>
+                            Welcome,
+                            <span id="userName"></span>
+                        </h2>
+
+                        <p>
+                            Monitor Stackly, employees, reports, inventory, and business
+                            performance in one powerful dashboard.
+                        </p>
+
+                        <div class="banner-buttons">
+
+                            <a href="404.html">View Reports</a>
+
+                            <a href="404.html">Add Stackly</a>
+
+                        </div>
+
+                    </div>
+
+                    <div class="banner-icon">
+                        <i class="fa-solid fa-chart-pie"></i>
+                    </div>
+
+                </div>
+
+                <!-- Statistics -->
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <h2>12k</h2>
+                        <p>Total Assets</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <i class="fa-solid fa-users"></i>
+                        <h2>540k</h2>
+                        <p>Employees</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <i class="fa-solid fa-building"></i>
+                        <h2>28k</h2>
+                        <p>Departments</p>
+                    </div>
+
+                </div>
+
+                <!-- Progress -->
+
+                <div class="dashboard-row">
+
+                    <div class="progress-card">
+
+                        <h3>System Performance</h3>
+
+                        <div class="progress-item">
+                            <span>Assets</span>
+                            <div class="progress">
+                                <div class="bar" style="width:92%"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress-item">
+                            <span>Inventory</span>
+                            <div class="progress">
+                                <div class="bar" style="width:78%"></div>
+                            </div>
+                        </div>
+
+                        <div class="progress-item">
+                            <span>Cloud Backup</span>
+                            <div class="progress">
+                                <div class="bar" style="width:98%"></div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="activity-card">
+
+                        <h3>Recent Activity</h3>
+
+                        <ul>
+                            <li>✅ Laptop assigned to John</li>
+                            <li>📊 Monthly Report Generated</li>
+                            <li>🔒 Security Scan Completed</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!--=========================
+            REPORTS SECTION
+            ==========================-->
+
+            <section id="reports" class="page-section">
+
+                <div class="reports-header">
+
+                    <h2>Reports &amp; Analytics</h2>
+
+                    <p>
+                        Monitor business performance, asset utilization, and monthly reports
+                        in real time.
+                    </p>
+
+                </div>
+
+                <!-- Report Cards -->
+
+                <div class="report-cards">
+
+                    <div class="report-card">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <h3>Monthly Reports</h3>
+                        <h1>24</h1>
+                        <span>Generated</span>
+                    </div>
+
+                    <div class="report-card">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <h3>Total Reports</h3>
+                        <h1>186</h1>
+                        <span>Available</span>
+                    </div>
+
+                    <div class="report-card">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <h3>Performance</h3>
+                        <h1>96%</h1>
+                        <span>Excellent</span>
+                    </div>
+
+                </div>
+
+                <!-- Progress -->
+
+                <div class="progress-section">
+
+                    <h3>Asset Utilization Report</h3>
+
+                    <div class="progress-box">
+
+                        <div class="label">
+                            <span>IT Equipment</span>
+                            <span>90%</span>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span style="width:90%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="progress-box">
+
+                        <div class="label">
+                            <span>Vehicles</span>
+                            <span>75%</span>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span style="width:75%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="progress-box">
+
+                        <div class="label">
+                            <span>Inventory</span>
+                            <span>85%</span>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span style="width:85%"></span>
+                        </div>
+
+                    </div>
+
+                    <div class="progress-box">
+
+                        <div class="label">
+                            <span>Cloud Storage</span>
+                            <span>98%</span>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span style="width:98%"></span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =========================
+                 EMPLOYEES
+            ========================= -->
+
+            <section id="employees" class="page-section">
+
+                <div class="section-header">
+                    <h2>Employee Activities</h2>
+                    <p>Track the latest employee actions and asset updates.</p>
+                </div>
+
+                <div class="activity-list">
+
+                    <div class="activity-card">
+
+                        <div class="activity-icon">
+                            <i class="fa-solid fa-user-check"></i>
+                        </div>
+
+                        <div class="activity-content">
+                            <h4>John Williams</h4>
+                            <p>Updated laptop inventory records.</p>
+                        </div>
+
+                        <span class="activity-time">09:30 AM</span>
+
+                    </div>
+
+                    <div class="activity-card">
+
+                        <div class="activity-icon">
+                            <i class="fa-solid fa-laptop"></i>
+                        </div>
+
+                        <div class="activity-content">
+                            <h4>Sarah Johnson</h4>
+                            <p>Assigned a new laptop to an employee.</p>
+                        </div>
+
+                        <span class="activity-time">10:45 AM</span>
+
+                    </div>
+
+                    <div class="activity-card">
+
+                        <div class="activity-icon">
+                            <i class="fa-solid fa-file-circle-check"></i>
+                        </div>
+
+                        <div class="activity-content">
+                            <h4>Michael Brown</h4>
+                            <p>Reviewed the monthly asset report.</p>
+                        </div>
+
+                        <span class="activity-time">12:15 PM</span>
+
+                    </div>
+
+                    <div class="activity-card">
+
+                        <div class="activity-icon">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+
+                        <div class="activity-content">
+                            <h4>David Wilson</h4>
+                            <p>Completed server maintenance.</p>
+                        </div>
+
+                        <span class="activity-time">03:20 PM</span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- =========================
+                 SETTINGS
+            ========================= -->
+            <section id="settings" class="page-section">
+
+                <div class="section-header">
+                    <h2>Settings</h2>
+                    <p>Manage your account, security and application preferences.</p>
+                </div>
+
+                <div class="settings-grid">
+
+                    <!-- Profile -->
+
+                    <div class="setting-card">
+
+                        <div class="setting-icon">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+
+                        <div class="setting-content">
+                            <h4>Profile</h4>
+                            <p>
+                                Update your personal information,
+                                profile image and account details.
+                            </p>
+                            <button onclick="window.location.href='404.html'">
+                                Manage Profile
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Notifications -->
+
+                    <div class="setting-card">
+
+                        <div class="setting-icon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+
+                        <div class="setting-content">
+
+                            <h4>Notifications</h4>
+
+                            <p>
+                                Control email notifications,
+                                alerts and updates.
+                            </p>
+                            <button onclick="window.location.href='404.html'">
+                                Manage Alerts
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Security -->
+
+                    <div class="setting-card">
+
+                        <div class="setting-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div class="setting-content">
+
+                            <h4>Security</h4>
+
+                            <p>
+                                Protect your account with
+                                authentication and security settings.
+                            </p>
+                            <button onclick="window.location.href='404.html'">
+                                Security Setup
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <!-- Password -->
+
+                    <div class="setting-card">
+
+                        <div class="setting-icon">
+                            <i class="fa-solid fa-key"></i>
+                        </div>
+
+                        <div class="setting-content">
+
+                            <h4>Password</h4>
+
+                            <p>
+                                Change your password and
+                                keep your account secure.
+                            </p>
+                            <button onclick="window.location.href='404.html'">
+                                Change Password
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stackly Authentication</title>
+
+<link rel="stylesheet" href="login.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<div class="right-panel">
+
+    <!-- LOGIN -->
+    <div class="form-box login active">
+
+        <div class="login-logo">
+            <img src="imresizer-asset.webp" alt="Logo">
+        </div>
+
+        <h2>Login</h2>
+
+        <form id="loginForm">
+
+            <div class="input-box">
+                <i class="fa-solid fa-user-shield"></i>
+
+                <select id="loginRole" required>
+                    <option value="">Select Role</option>
+                    <option value="Admin">Admin</option>
+                    <option value="Viewer">Viewer</option>
+                </select>
+            </div>
+
+            <small id="roleError"></small>
+
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email Address">
+            </div>
+
+            <small id="loginEmailError"></small>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password">
+
+                <i class="fa-solid fa-eye toggle-password"
+                id="loginEye"></i>
+
+            </div>
+
+            <small id="loginPasswordError"></small>
+
+            <div class="options">
+
+                <label>
+                    <input type="checkbox">
+                    Remember Me
+                </label>
+
+                <a href="404.html">Forgot Password?</a>
+
+            </div>
+
+            <button class="btn" id="loginBtn">
+                Login
+            </button>
+
+            <a href="404.html" class="google-btn">
+                <i class="fa-brands fa-google"></i>
+                Continue with Google
+            </a>
+
+            <div class="divider">
+                <span>OR</span>
+            </div>
+
+            <p>
+                Don't have an account?
+                <a href="#" id="showSignup">Sign Up</a>
+            </p>
+
+            <div class="back-home">
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Back Home
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+
+
+
+    <!-- SIGNUP -->
+
+    <div class="form-box signup">
+
+        <div class="logo-image">
+            <img src="imresizer-asset.webp" alt="">
+        </div>
+
+        <h2>Create Account</h2>
+
+        <form id="signupForm">
+
+            <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                type="text"
+                id="name"
+                placeholder="Full Name">
+            </div>
+
+            <div class="input-box">
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                type="email"
+                id="email"
+                placeholder="Email">
+            </div>
+
+            <small id="emailError"></small>
+
+            <div class="input-box">
+                <i class="fa-solid fa-phone"></i>
+
+                <input
+                type="tel"
+                id="phone"
+                placeholder="Phone">
+            </div>
+
+            <small id="phoneError"></small>
+
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                type="password"
+                id="password"
+                placeholder="Password">
+            </div>
+
+            <small id="passwordError"></small>
+
+            <div class="strength">
+                <div id="strengthBar"></div>
+            </div>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Confirm Password">
+
+            </div>
+
+            <small id="confirmError"></small>
+
+            <div class="input-box">
+
+                <i class="fa-solid fa-user-shield"></i>
+
+                <select id="role">
+
+                    <option value="">Select Role</option>
+                    <option>Admin</option>
+                    <option>Viewer</option>
+
+                </select>
+
+            </div>
+
+            <small id="roleSignupError"></small>
+
+            <label class="terms">
+                <input type="checkbox">
+                I agree to Terms & Conditions
+            </label>
+
+            <small id="termsError"></small>
+
+            <button class="btn">
+                Create Account
+            </button>
+
+            <p>
+                Already have an account?
+                <a href="#" id="showLogin">Login</a>
+            </p>
+
+            <div class="back-home">
+
+                <a href="index.html">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back Home
+
+                </a>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+
+</html>
